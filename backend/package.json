@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test:domain": "jest --projects ./test/domain",
     "start:dev": "nodemon",
     "start": "npm run build && node build/index.js",
     "build": "rimraf ./build && tsc",
@@ -26,6 +27,8 @@
     "@types/jest": "^28.1.6",
     "@types/module-alias": "^2.0.1",
     "@types/node": "^18.0.3",
+    "@types/pg": "^8.6.5",
+    "@types/sequelize": "^4.28.14",
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
@@ -43,7 +46,10 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@overnightjs/core": "^1.7.6",
     "express": "^4.18.1",
-    "module-alias": "^2.2.2"
+    "module-alias": "^2.2.2",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.3"
   }
 }
