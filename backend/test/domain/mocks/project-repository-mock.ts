@@ -1,9 +1,8 @@
 import { ProjectEntity } from '../entities/project-entity';
-import { ProjectPageEntity } from '../entities/project-page-entity';
 import { ProjectRepository } from '../interfaces/repositories/project-repository';
 
 export class MockProjectRepository implements ProjectRepository {
-  getPaginatedFilteredProjects(): Promise<ProjectPageEntity> {
+  getProjects(): Promise<ProjectEntity[]> {
     throw new Error('Method not implemented');
   }
 
