@@ -3,7 +3,7 @@ import { GetProjects } from '@src/domain/usecases/get-projects';
 import { testProject1, testProject2 } from '../mocks/project-mock';
 import { MockProjectRepository } from '../mocks/project-repository-mock';
 
-describe('Get All Projects Use Case', () => {
+describe('Get Projects Use Case', () => {
   let mockProjectRepository: ProjectRepository;
 
   beforeEach(() => {
@@ -11,7 +11,7 @@ describe('Get All Projects Use Case', () => {
     mockProjectRepository = new MockProjectRepository();
   });
 
-  it('Should return a list of projects', async () => {
+  it('Should return a list of all projects', async () => {
     const expected = [testProject1, testProject2];
     jest
       .spyOn(mockProjectRepository, 'getProjects')
