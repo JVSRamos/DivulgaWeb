@@ -4,13 +4,14 @@ import {
   InferCreationAttributes,
   DataTypes,
   Sequelize,
+  CreationOptional,
 } from 'sequelize';
 
 export class Project extends Model<
   InferAttributes<Project>,
   InferCreationAttributes<Project>
 > {
-  id!: number;
+  id!: CreationOptional<number>;
   name!: string;
   courseSemester!: number;
   year!: number;
@@ -42,6 +43,7 @@ export class Project extends Model<
         },
       },
       {
+        timestamps: false,
         sequelize,
       }
     );

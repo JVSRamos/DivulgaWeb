@@ -5,7 +5,7 @@ import {
   DB_PASSWORD,
   DB_PORT,
   DB_USER,
-} from '@src/config/server';
+} from '../config/server';
 import { Sequelize } from 'sequelize';
 
 export const sequelize = new Sequelize(DB_DATABASE, DB_USER, DB_PASSWORD, {
