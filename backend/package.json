@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:domain": "jest --projects ./test/domain",
+    "test:services": "jest --projects ./test/services",
     "start:dev": "nodemon",
     "start": "npm run build && node build/index.js",
     "build": "rimraf ./build && tsc",
