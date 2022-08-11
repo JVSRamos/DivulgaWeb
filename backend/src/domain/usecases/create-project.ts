@@ -9,7 +9,7 @@ export class CreateProject implements CreateProjectUseCase {
     this.projectRepository = projectRepository;
   }
 
-  async execute(project: ProjectEntity): Promise<boolean> {
+  async execute(project: ProjectEntity): Promise<ProjectEntity> {
     const result = await this.projectRepository.createProject(project);
     return result;
   }
