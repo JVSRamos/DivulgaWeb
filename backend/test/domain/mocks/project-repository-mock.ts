@@ -6,7 +6,7 @@ export class MockProjectRepository implements ProjectRepository {
     throw new Error('Method not implemented');
   }
 
-  createProject(project: ProjectEntity): Promise<boolean> {
+  createProject(project: ProjectEntity): Promise<ProjectEntity> {
     throw new Error('Method not implemented');
   }
 }

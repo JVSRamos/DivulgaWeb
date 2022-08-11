@@ -15,9 +15,9 @@ describe('Create Project Use Case', () => {
     const inputProject = testProject1;
     jest
       .spyOn(mockProjectRepository, 'createProject')
-      .mockImplementation(() => Promise.resolve(true));
+      .mockImplementation(() => Promise.resolve(inputProject));
     const createProject = new CreateProject(mockProjectRepository);
     const result = await createProject.execute(inputProject);
-    expect(result).toBe(true);
+    expect(result).toStrictEqual(inputProject);
   });
 });
