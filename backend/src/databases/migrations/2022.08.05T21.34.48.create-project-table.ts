@@ -2,7 +2,7 @@ import { Migration } from '../umzug';
 import { DataTypes } from 'sequelize';
 
 export const up: Migration = async ({ context: sequelize }) => {
-  await sequelize.getQueryInterface().createTable('projects', {
+  await sequelize.getQueryInterface().createTable('Projects', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
